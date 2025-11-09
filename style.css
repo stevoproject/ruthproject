@@ -4,7 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  color: red !important; /* All text red */
+  color: red !important; /* all text red */
 }
 
 body {
@@ -21,11 +21,10 @@ header {
   justify-content: space-between;
   position: relative;
   z-index: 10;
-  background: rgba(255, 255, 255, 0.05); /* optional overlay for contrast */
 }
 
 .logo img {
-  max-height: 50px;
+  max-height: 60px;
   width: auto;
   filter: brightness(0) saturate(100%) invert(14%) sepia(100%) saturate(7492%) hue-rotate(0deg) brightness(94%) contrast(115%);
 }
@@ -40,6 +39,7 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   color: red !important;
+  font-weight: 500;
 }
 
 .auth-links {
@@ -54,6 +54,7 @@ nav ul li a {
   border-radius: 20px;
   transition: 0.3s;
   color: red !important;
+  white-space: nowrap;
 }
 
 .auth-links .signup {
@@ -138,8 +139,9 @@ nav ul li a {
   background: darkred;
 }
 
-.para {
-  margin-top: 15px;
+.txt {
+  margin-top: 20px;
+  margin-left: 10px;
 }
 
 /* ================= MEDIA QUERIES ================= */
@@ -148,6 +150,14 @@ nav ul li a {
 @media (max-width: 1024px) {
   .hero h1 {
     font-size: 2.5rem;
+  }
+
+  .search-box input {
+    font-size: 0.95rem;
+  }
+
+  .search-box button {
+    padding: 10px 15px;
   }
 }
 
@@ -166,40 +176,4 @@ nav ul li a {
 
   .auth-links {
     flex-direction: column;
-    gap: 10px;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .search-box {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .search-box button {
-    width: 100%;
-  }
-}
-
-/* Mobile phones */
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 1.5rem;
-  }
-
-  .search-box input {
-    padding: 10px 12px;
-    font-size: 0.9rem;
-  }
-
-  .search-box button {
-    padding: 10px;
-    font-size: 0.9rem;
-  }
-
-  .para {
-    font-size: 0.85rem;
-  }
-}
+    ga
