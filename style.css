@@ -72,8 +72,7 @@ nav ul li a:hover {
 .hero {
   position: relative;
   height: 100vh;
-  background: url('images/bg.jpg')
-    center/cover no-repeat;
+  background: url('images/bg.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: flex-start; /* Align content to the left */
@@ -102,7 +101,6 @@ nav ul li a:hover {
   margin-top: 50%;
   margin-bottom: 30px;
   line-height: 1.2;
-
 }
 
 .search-box {
@@ -113,7 +111,6 @@ nav ul li a:hover {
   overflow: hidden;
   width: 400px;
   max-width: 90%;
-
 }
 
 .search-box input {
@@ -136,7 +133,40 @@ nav ul li a:hover {
   background: #0097a7;
 }
 
-.txt{
-margin-top: 20px;
-margin-left:10px;
+.txt {
+  margin-top: 20px;
+  margin-left: 10px;
 }
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  header {
+    padding: 20px 40px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+    margin-top: 40%;
+  }
+
+  .search-box {
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
