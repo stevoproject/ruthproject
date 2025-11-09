@@ -1,16 +1,17 @@
+/* ================= GLOBAL STYLES ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  color: red !important; /* All text red */
 }
 
 body {
   background-color: #f4f4f4;
-  color: #fff;
 }
 
-/* Header */
+/* ================= HEADER ================= */
 header {
   width: 100%;
   padding: 20px 80px;
@@ -23,10 +24,9 @@ header {
   z-index: 10;
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: 700;
-  color: #fff;
+.logo img {
+  max-height: 50px;
+  filter: brightness(0) saturate(100%) invert(14%) sepia(100%) saturate(7492%) hue-rotate(0deg) brightness(94%) contrast(115%);
 }
 
 nav ul {
@@ -38,19 +38,12 @@ nav ul li {
   margin-right: 30px;
 }
 
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-nav ul li a:hover {
-  color: #00bcd4;
+.auth-links {
+  display: flex;
+  align-items: center;
 }
 
 .auth-links a {
-  color: #fff;
   text-decoration: none;
   margin-left: 20px;
   padding: 8px 16px;
@@ -60,25 +53,24 @@ nav ul li a:hover {
 
 .auth-links .signup {
   background-color: #fff;
-  color: #000;
+  color: red !important;
 }
 
 .auth-links .signup:hover {
-  background-color: #00bcd4;
-  color: #fff;
+  background-color: red;
+  color: #fff !important;
 }
 
-/* Hero Section */
+/* ================= HERO SECTION ================= */
 .hero {
   position: relative;
   height: 100vh;
-  background: url('images/bg.jpg')
-    center/cover no-repeat;
+  background: url('images/bg.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Align content to the left */
+  justify-content: flex-start;
   text-align: left;
-  padding-left: 80px; /* Add space from the left */
+  padding-left: 80px;
 }
 
 .overlay {
@@ -98,13 +90,14 @@ nav ul li a:hover {
 
 .hero h1 {
   font-size: 48px;
-  text-transform: capitalize;
+  text-transform: capitalize; /* Capitalize first letters */
   margin-top: 50%;
   margin-bottom: 30px;
   line-height: 1.2;
-
+  color: red;
 }
 
+/* ================= SEARCH BOX ================= */
 .search-box {
   display: flex;
   align-items: center;
@@ -113,7 +106,6 @@ nav ul li a:hover {
   overflow: hidden;
   width: 400px;
   max-width: 90%;
-
 }
 
 .search-box input {
@@ -122,10 +114,16 @@ nav ul li a:hover {
   padding: 12px 20px;
   width: 100%;
   font-size: 16px;
+  color: red; /* Input text red */
+}
+
+.search-box input::placeholder {
+  color: red; /* Placeholder text red */
+  opacity: 1;
 }
 
 .search-box button {
-  background: #00bcd4;
+  background: red; /* Search button background */
   border: none;
   padding: 12px 20px;
   cursor: pointer;
@@ -133,17 +131,16 @@ nav ul li a:hover {
 }
 
 .search-box button:hover {
-  background: #0097a7;
+  background: darkred;
 }
 
-.txt{
-margin-top: 20px;
-margin-left:10px;
+.para {
+  margin-top: 20px;
 }
 
-/* Existing styles above stay the same... */
+/* ================= MEDIA QUERIES ================= */
 
-/* --- MEDIA QUERIES FOR RESPONSIVENESS --- */
+/* Large tablets */
 @media (max-width: 1024px) {
   header {
     padding: 15px 40px;
@@ -159,6 +156,7 @@ margin-left:10px;
   }
 }
 
+/* Tablets */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -195,6 +193,7 @@ margin-left:10px;
   }
 }
 
+/* Mobile phones */
 @media (max-width: 480px) {
   .hero h1 {
     font-size: 22px;
