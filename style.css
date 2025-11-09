@@ -4,11 +4,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  color: red !important; /* all text red */
 }
 
 body {
   background-color: #f4f4f4;
+  color: #fff; /* default text color */
 }
 
 /* ================= HEADER ================= */
@@ -26,7 +26,6 @@ header {
 .logo img {
   max-height: 60px;
   width: auto;
-  filter: brightness(0) saturate(100%) invert(14%) sepia(100%) saturate(7492%) hue-rotate(0deg) brightness(94%) contrast(115%);
 }
 
 nav ul {
@@ -38,8 +37,13 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: red !important;
+  color: #fff; /* default link color */
   font-weight: 500;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00bcd4; /* hover effect */
 }
 
 .auth-links {
@@ -53,18 +57,18 @@ nav ul li a {
   padding: 8px 16px;
   border-radius: 20px;
   transition: 0.3s;
-  color: red !important;
+  color: #fff;
   white-space: nowrap;
 }
 
 .auth-links .signup {
   background-color: #fff;
-  color: red !important;
+  color: #000;
 }
 
 .auth-links .signup:hover {
-  background-color: red;
-  color: #fff !important;
+  background-color: #00bcd4;
+  color: #fff;
 }
 
 /* ================= HERO SECTION ================= */
@@ -98,9 +102,9 @@ nav ul li a {
 .hero h1 {
   font-size: 3rem;
   text-transform: capitalize;
-  color: red;
   margin-bottom: 20px;
   line-height: 1.2;
+  color: #fff; /* heading color */
 }
 
 /* ================= SEARCH BOX ================= */
@@ -119,16 +123,16 @@ nav ul li a {
   padding: 12px 20px;
   width: 100%;
   font-size: 1rem;
-  color: red;
+  color: #000;
 }
 
 .search-box input::placeholder {
-  color: red;
-  opacity: 1;
+  color: #000;
+  opacity: 0.7;
 }
 
 .search-box button {
-  background: red;
+  background: #00bcd4;
   border: none;
   padding: 12px 20px;
   cursor: pointer;
@@ -136,7 +140,7 @@ nav ul li a {
 }
 
 .search-box button:hover {
-  background: darkred;
+  background: #0097a7;
 }
 
 .txt {
@@ -176,4 +180,40 @@ nav ul li a {
 
   .auth-links {
     flex-direction: column;
-    ga
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    margin-top: 20%;
+  }
+
+  .search-box {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .search-box button {
+    width: 100%;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.5rem;
+    margin-top: 15%;
+  }
+
+  .search-box input {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  .search-box button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .txt {
+    font-size: 0.85rem;
